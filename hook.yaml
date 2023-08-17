@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  generateName: app-flock-notification-
+  name: after
   annotations:
     argocd.argoproj.io/hook: PostSync
     argocd.argoproj.io/hook-delete-policy: HookSucceeded
@@ -19,6 +19,6 @@ spec:
           - "Content-Type: application/json"
           - "-d"
           - "{\"text\": \"argocd hook worked\"}"
-          - "http://api.flock.com/hooks/sendMessage/2acafd42-fedd-44c8-a738-5e4442534fd4"
+          - "https://api.flock.com/hooks/sendMessage/e0983b2a-20b8-4436-9565-1b7ff6ab7c3f"
       restartPolicy: Never
   backoffLimit: 2
