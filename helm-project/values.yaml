@@ -27,7 +27,7 @@ redis:
   
 wordpress:
   appname: wordpress
-  image: inferno786/ubuntu
+  image: wordpress:latest
   servicename: wordpress-service
   env:
     dbuser: root
