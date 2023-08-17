@@ -1,0 +1,41 @@
+mysql: 
+  image: mysql:8.1.0
+  replica: 1
+  appname: mysql
+  env:
+    dbpassword: admin
+    dbname: wordpress
+  servicename: mysql-service
+  selector:
+    appname: mysql
+  ports:
+    protocol: TCP
+    port: 3306
+    targetport: 3306
+
+redis:
+  replica: 1
+  appname: redis
+  image: redis:latest
+  servicename: redis-service
+  selector:
+    appname: redis
+  ports:
+    protocol: TCP
+    port: 6379
+    targetport: 6379
+  
+wordpress:
+  appname: wordpress
+  image: inferno786/ubuntu
+  servicename: wordpress-service
+  env:
+    dbuser: root
+    dbpass: admin
+  selector:
+    appname: wordpress
+  ports:
+    protocol: TCP
+    port: 80
+    targetport: 80
+    nodeport: 30080
