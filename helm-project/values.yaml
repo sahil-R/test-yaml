@@ -1,5 +1,5 @@
 mysql: 
-  image: mysql:latest
+  image: mysql:8.1.0
   replica: 1
   appname: mysql
   env:
