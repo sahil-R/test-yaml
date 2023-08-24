@@ -10,4 +10,3 @@ spec:
     - protocol: {{.Values.wordpress.ports.protocol}}
       port: {{.Values.wordpress.ports.port}}
       targetPort: {{.Values.wordpress.ports.targetport}}
-      nodePort: {{.Values.wordpress.ports.nodeport}}
