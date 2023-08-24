@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: mydeployment1
+  name: mydeployment2
   namespace: default
 spec:
   project: myproject
