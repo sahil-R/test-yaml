@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: git@github.com:sahil-R/test-yaml.git
+    repoURL: https://github.com/sahil-R/test-yaml.git
     path: applicationset
   destination:
     server: https://kubernetes.default.svc
