@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: git@github.com:sahil-R/test-yaml.git
     targetRevision: HEAD
-    path: ./application-set.yaml
+    path: application-set.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: default
