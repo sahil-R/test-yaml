@@ -6,7 +6,7 @@ metadata:
 spec:
   project: myproject
   source:
-    repoURL: git@github.com:sahil-R/test-yaml.git
+    repoURL: https://github.com/sahil-R/test-yaml.git
     path: helm-project
   destination:
     server: https://kubernetes.default.svc
