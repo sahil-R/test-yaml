@@ -2,14 +2,14 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: mydeployment2
-  namespace: default
+  namespace: argocd
 spec:
-  project: myproject
+  project: default
   source:
     repoURL: https://github.com/sahil-R/test-yaml.git
     path: helm-project
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: argocd
   syncPolicy:
     automated: {}
