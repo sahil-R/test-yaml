@@ -7,8 +7,10 @@ spec:
   generators:
   - list:
       elements:
-      - cluster: mydeployment1
+      - cluster: staging
         url: https://kubernetes.default.svc
+      - cluster: production
+        url: gke_sahilr_us-central1-c_production
   template:
     metadata:
       name: '{{cluster}}-test'
